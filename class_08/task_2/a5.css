@@ -1,0 +1,13 @@
+body{text-align: center;
+    font-family: Times New Roman;
+    font-size: 12pt;}
+    .page {
+    border: 2px solid black;}
+    .titul {margin: 20mm 10mm 20mm 23mm;}
+    div {line-height: 0.4;}
+    .univer {font-weight: bold;margin-top: 20mm; font-size: 12pt;}
+    .topic {margin-top:55mm;
+        line-height: 1.0;}
+    .student {text-align:left;margin-left: 45mm; margin-top: 25mm;}
+    span {text-decoration-line: underline;}
+    .Minsk {margin-top: 40mm}
