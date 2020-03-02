@@ -1,0 +1,4 @@
+* {padding: 0; margin: 0}
+div {width: 7.5cm; height: 0.5cm; border: 1px solid rgb(171, 106, 233);}
+p {width: 72%; height: 100%; background-color: rgb(171, 106, 233);}
+span {margin-left: 3.5cm;}

@@ -1,0 +1,6 @@
+
+.mli {display: inline-table}
+.sli {display: none;}
+.mli:hover .sli {display: block;}
+.check1:not(:checked)~.map {display: none;}
+.check2:not(:checked)~.formad {display: none;}
