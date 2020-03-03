@@ -57,16 +57,17 @@
     <div>
         <h3>Выберите способ доставки</h3>
         <div class="switch">
-            <input type="radio" class="check1" name="adress">
-            <span>Самовывоз</span>
+            <input type="radio" class="check1" id="maping" name="adress">
+            <label for="maping">
+                Самовывоз</label>
             <div class="map"><iframe src="https://yandex.by/map-widget/v1/-/CKapJSMx" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
-        </div>
+        </div></div>
         <div class="switch1">
-            <input type="radio" class="check2" name="adress">
-            <span>Курьером</span>
-    
+            <input type="radio" class="check2" id="send" name="adress">
+             <label for="send">
+            Доставка</label>
        <form class="formad">
-           <label>Введите адрес для доставки
+           <label >Введите адрес для доставки
             <input type="text">
     </label></form>
 </div>
@@ -74,8 +75,7 @@
 <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Комментарии к заказу"></textarea><br>
 <form ><label><input type="checkbox" required> Я прочитал и согласен с условиями доставки</label>
     <button>Подтвердить заказ</button></form>
-
-</div></main>
+</main>
     <footer>
         <p>Время работы: с 10 до 21:00</p>
         <p>Адрес офиса: 220095, г. Минск, ул. Тимирязева, 121-55</p>
