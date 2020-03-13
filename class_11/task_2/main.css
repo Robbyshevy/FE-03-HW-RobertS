@@ -1,0 +1,11 @@
+span {color: gray;
+font-size: 50mm;}
+input {visibility: hidden;}
+span:hover {color: blue;}
+.switch :checked~span {color:red}
+.switch :checked~span:hover {opacity: .7;}
+
+
+
+
+

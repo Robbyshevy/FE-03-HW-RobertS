@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?16689725');
+  src: url('../font/fontello.eot?16689725#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?16689725') format('woff2'),
+       url('../font/fontello.woff?16689725') format('woff'),
+       url('../font/fontello.ttf?16689725') format('truetype'),
+       url('../font/fontello.svg?16689725#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.check1 {font-family: 'fontello';}
+.check1__checkbox {visibility: hidden;}
+.check1__checkbox:checked~.notchecked {display:none;}
+.check1__checkbox:not(:checked)~.checked {display: none;}

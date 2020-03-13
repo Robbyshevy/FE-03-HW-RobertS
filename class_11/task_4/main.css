@@ -1,0 +1,24 @@
+* {margin: 0;
+padding: 0; font-family: 'Lobster', cursive; font-size: 18pt;}  
+span {font-family: 'fontello';}
+.page{position: absolute;
+     width: 100%;
+    height: 100%;
+    background-image: url(background.jpg);
+background-size: 100% 100%;
+background-position: 100% 100%;
+background-attachment: scroll;}
+.logo, .search, .menu, .phone {float: left; margin: 10px;}
+.search, .menu, .phone {margin-top: 7mm;}
+.search {width: 25%;}
+.menu {height: 20pt;
+    min-width: 7%;}
+img, #logo {width: 75mm; height: 50mm;}
+
+ul {display: none;}
+.menu:hover ul {display: inline; margin-right: 5px;}
+a {color: rgb(2, 0, 0);}
+
+
+
+
