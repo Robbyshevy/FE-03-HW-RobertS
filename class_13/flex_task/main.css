@@ -1,0 +1,27 @@
+.main {width: 240mm;
+height: 160mm;
+display: flex;
+flex-direction: row;
+margin-top: 4%;
+margin-left: 15%;
+color: white;}
+
+.holod, .r1, .maslo {width: 25%;}
+.kol, .muz, .shini, .pilisos {height: 50%;}
+.holod, .muz, .shini, .pilisos, .kol, .maslo {display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;}
+.holod {background-color: blue;}
+ .shini {background-color: chocolate;}
+  .pilisos {background-color:rgb(0, 255, 221);}
+   .maslo {background-color:rgb(0, 110, 255);}
+.kol {background-color: rgb(1, 138, 69);}
+     .muz {background-color: rgb(0, 0, 134);}
+
+
+
+
+
+
+    

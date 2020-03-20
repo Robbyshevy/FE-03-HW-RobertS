@@ -1,0 +1,27 @@
+.main {width: 100vw;
+    height: 100%;
+    background-color: seagreen;}
+    img {width: 50mm;
+    height: 50mm;}
+img:hover {
+    animation-name: vent;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+    animation-timing-function: ease cubic-bezier(1, 0, 0, 1);
+}
+img {animation-name: ventago;
+    animation-direction: reverse;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+    animation-timing-function: ease cubic-bezier(1, 0, 0, 1);}
+
+
+@keyframes vent
+{from {
+    transform: rotate(0deg);}
+to {transform: rotate(1080deg);}}
+
+@keyframes ventago
+{from {transform: rotate(0deg);}
+to {transform: rotate(1080deg);}}

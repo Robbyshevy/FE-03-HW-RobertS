@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.eot?3156010');
+    src: url('../font/fontello.eot?3156010#iefix') format('embedded-opentype'),
+         url('../font/fontello.woff2?3156010') format('woff2'),
+         url('../font/fontello.woff?3156010') format('woff'),
+         url('../font/fontello.ttf?3156010') format('truetype'),
+         url('../font/fontello.svg?3156010#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  *{margin: 0;
+    padding: 0;
+     font-family: 'Lobster', cursive; 
+     font-size: 16pt; 
+     color: white;} 
+body {background-image: url(background.jpg);
+    background-size: 100vw 100vh;
+    background-position: 100% 100%;
+    background-attachment: fixed;}
+    button {color: black;}
+    header {position: absolute;}  
+  span {font-family: 'fontello';
+    font-size: 20pt;
+color: white;}
+.span {text-align: right;}
+
+img {width: 100%; height: 100%;}
+.logosearch {display: flex;
+flex-direction: row;}
+.logo {width: 34%; height: 40%;}
+.checkbox {visibility: hidden;}
+header {width: 100%;
+    height: 71%;
+    display: flex;
+flex-direction: row;
+justify-content: space-between;}
+.menu {margin-right: 10px;
+display: flex;
+flex-direction: column;
+}
+.search, .menu1 {margin: 10px;}
+.checkbox:not(:checked)~ .menu1 {display: none;}
+
+@media (max-width: 768px)
+{.logosearch {flex-direction: column;}
+header {flex-direction: column;
+align-items: flex-start;
+justify-content: flex-start;}
+.span {text-align: left;}}

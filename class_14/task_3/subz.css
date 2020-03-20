@@ -1,0 +1,26 @@
+
+.main { 
+    margin-left:300px;
+    width: 66px;
+height: 135px;
+overflow: hidden;}
+img:hover {
+animation-name: subzero;
+animation-duration: 0.3s;
+animation-direction: normal;
+animation-iteration-count: 1;}
+
+@keyframes subzero
+{from {margin-left:0px;}
+16.6% {margin-left:-66px;}
+33.2% {margin-left:-132px}
+49.8% {margin-left:-198px;}
+66.4% {margin-left:-264px;}
+83% {margin-left:-330px;}
+to {margin-left:-396px;}}
+
+
+
+
+
+
