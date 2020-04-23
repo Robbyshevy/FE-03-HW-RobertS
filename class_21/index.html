@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+
+<body>
+        <script>
+                // Task 1
+                function Storony(kat1, kat2, gipotenuza) {
+                        if (kat1 <= 0 || kat2 <= 0 || gipotenuza <= 0) {
+                                return 'Значения неверны';
+                        } else
+                        if (Math.pow(kat1, 2) + Math.pow(kat2, 2) == Math.pow(gipotenuza, 2)) {
+                                return true;
+                        } else {
+                                return false;
+                        }
+                }
+                console.log(Storony(3, 4, 5));
+                // Task 2
+                function repeat(str, n) {
+                        for (let a = 1; a < n; a++) {
+                                str = str + str;
+                        } {
+                                return str;
+                        }
+                }
+                console.log(repeat('__', 4));
+                // // Task 3
+                function UchPar(party, pupil) {
+                        if ((pupil == 1 & party == 1) || (pupil / party <= 2 & pupil / party > 1.5)) {
+                                return 'Всем хватило парт';
+                        }
+                        if (pupil / party > 2) {
+                                return "Не хватает " + Math.round((pupil - 2 * party) / 2) + " парт(ы)";
+                        };
+                        if (pupil / party < 1.5) {
+                                return pupil % party + " лишних парт";
+                        }
+                }
+                console.log(UchPar(12, 4));
+                // Task 4
+                function Mark(x) {
+                        if (x < 1 || x > 10 || isNaN(x) == true) {
+                                return "Error";
+                        };
+                        if (x > 9) {
+                                return 'Brilliant';
+                        };
+                        if (x > 8 & x < 10) {
+                                return 'Excellent';
+                        };
+                        if (x > 7 & x < 9) {
+                                return 'Almost excellent';
+                        };
+                        if (x > 6 & x < 8) {
+                                return 'Very good';
+                        };
+                        if (x > 5 & x < 7) {
+                                return 'Good';
+                        };
+                        if (x > 4 & x < 6) {
+                                return 'Almost good';
+                        };
+                        if (x > 2 & x < 5) {
+                                return 'Satisfactory';
+                        };
+                        if (x >= 1 & x < 3) {
+                                return 'UnSatisfactory';
+                        };
+                }
+                console.log(Mark(4));
+                // Task 5
+                function prompting(x) {
+                        let a
+                        do {
+                                a = Number(prompt(''))
+                        }
+                        while (a != 0); {
+                                return a;
+                        }
+                }
+                console.log(prompting(2));
+                // Task 6
+                function prompting(x) {
+                        let a, i, sum;
+                        sum = 0;
+                        i = 0;
+                        do {
+                                i++;
+                                a = Number(prompt(''));
+                                sum += a;
+                                console.log(sum);
+                        }
+                        while (sum < 100); {
+                                return i;
+                        }
+                }
+                console.log(prompting(2));
+                // Task 7
+                function isPrime(num) {
+                        if (num <= 1) {
+                                return false;
+                        };
+                        for (let i = 2; i < num; i++)
+                                if (num % i === 0) return false;
+                        return true;
+                }
+                console.log(isPrime(3));
+                // Task 8
+                function Season(x) {
+                        if (x < 1 || x > 12 || isNaN(x) == true) {
+                                return "Error";
+                        };
+                        if (x < 4 || x > 11) {
+                                return "Winter";
+                        };
+                        if (x > 3 && x < 6) {
+                                return "Spring";
+                        };
+                        if (x > 5 && x < 9) {
+                                return "Summer";
+                        }; {
+                                return "Autumn"
+                        };
+                }
+                console.log(Season(13));
+                // Task 9
+                function divided() {
+                        let i = 98
+                        while (i > 10) {
+                                if (i % 7 === 0 || i % 10 === 7) {
+                                        console.log(i)
+                                };
+                                i--;
+                        } {
+                                return;
+                        }
+                }
+                divided();
+                // Task 10
+                function Divider() {
+                        let a = 2;
+
+                        while (a < 21) {
+                                let b = 1;
+                                while (b <= a) {
+                                        if (a % b === 0) {
+                                                console.log(b);
+                                        }
+                                        b++;
+                                };
+                                a++;
+                        } {
+                                return;
+                        }
+                }
+                Divider();
+                // Task 11
+                function NewDivider(x, y) {
+                        let a = x;
+                        while (a <= y) {
+                                let b = 1;
+                                while (b <= a) {
+                                        if (a % b === 0) {
+                                                console.log(b);
+                                        }
+                                        b++;
+                                };
+                                a++;
+                        } {
+                                return;
+                        }
+                }
+                NewDivider(13, 31);
+                // Task 12
+                function bites(size, unit) {
+                        if (isNaN(size) == true || Number(unit) == true) {
+                                return 'error';
+                        };
+                        if (unit == "Кб") {
+                                return size * 1024;
+                        };
+                        if (unit == "Мб") {
+                                return size * Math.pow(1024, 2);
+                        };
+                        if (unit == "Гб") {
+                                return size * Math.pow(1024, 3);
+                        }; {
+                                return 'error'
+                        };
+                };
+                console.log(bites(2, 23));
+                // Task 13
+                function LastDivider(x, y) {
+                        let a;
+                        if (x < y) {
+                                a = x
+                        } else
+                        if (x > y) {
+                                a = y
+                        } else
+                                a = x;
+                        while (a) {
+                                if (x % a == 0 && y % a == 0) {
+                                        return a
+                                };
+                                a--;
+                        } {
+                                return;
+                        }
+                }
+                console.log(LastDivider(30, 50));
+                // Task 14
+                function LastDividerRec(x, y) {
+                        if (x < 1 || y < 1) {
+                                return error;
+                        };
+                        if (x == y) {
+                                return x
+                        };
+                        if (x < y) {
+                                let a;
+                                a = x;
+                                while (a) {
+                                        if (x % a == 0 && y % a == 0) {
+                                                return a;
+                                        };
+                                        a--;
+                                };
+                        } else
+                        if (x > y) {
+                                return LastDividerRec(y, x);
+                        }; {
+                                return;
+                        }
+                }
+                console.log(LastDividerRec(31, 20));
+                console.log(LastDividerRec(3, 5));
+                // Task 15
+                function Pencil(n) {
+                        if (n === 1 || (n % 10 == 1 && n > 20)) {
+                                return n + " Карандаш";
+                        };
+                        if ((n > 1 && n < 5) || (n % 10 > 1 && n % 10 < 5)) {
+                                return n + " Карандаша";
+                        }; {
+                                return n + " Карандашей";
+                        }
+                }
+                console.log(Pencil(31));
+                // Task 16
+                function SumSquar(x) {
+                        if (x > 162) {
+                                return false;
+                        };
+                        let a = 1;
+                        while (a < 10) {
+                                let b = 1;
+                                while (b < 10) {
+                                        if (x == Math.pow(a, 2) + Math.pow(b, 2)) {
+                                                return true
+                                        };
+                                        b++;
+                                };
+                                a++;
+                        }; {
+                                return false;
+                        }
+                }
+                console.log(SumSquar(20));
+        </script>
+</body>
+
+</html>
