@@ -1,5 +1,5 @@
 # 1. Введение в Web-разработку
-### [Задание 1. HTML-разметка] (https://github.com/Robbyshevy/FE-03-HW-RobertS/tree/master/Class_01/Task_1)
+### [Задание 1. HTML-разметка](https://github.com/Robbyshevy/FE-03-HW-RobertS/tree/master/Class_01/Task_1)
 # 5. Основы HTML
 ### Задание 1. Сервис ремонта мобильных телефонов
 ### Задание 2. Магазин оргтехники
