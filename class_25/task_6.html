@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Для решения задач 3-6 используйте файл [uscities.js](src/uscities.js).
+//     6. Преобразуйте представленный массив "Города" в объект "Штаты":
+// 	* для каждого штата – отдельное свойство объекта (ключ = название штата);
+// 	* значение каждого свойства – массив городов;
+// 	* каждый элемент массива – название города, население и место в общем рейтинге (rank).
+// // 
+    let states = []; /* creating an empty array */
+    states = data.map(elem => elem = elem.state); /* array with all states */
+    let statesObj = {} /* creating a final object(now it's empty) */
+    for (let a = 0; a < states.length; a++) {
+        statesObj[states[a]] = data.filter(elem => elem.state == states[a]).map(elem => elem = {
+            city: elem.city,
+            population: elem.population,
+            rank: elem.rank
+        })
+    } /* 1. creating keys of final object; 2.filter of citites for each state; 3. transofrming cities into object with city, population and rank */
+</script>
+
+</html>

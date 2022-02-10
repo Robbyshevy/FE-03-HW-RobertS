@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 250px;
+        }
+
+        span {
+            font-style: italic;
+        }
+
+        .mainDiv {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .twoBlocks {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="">
+        <select name="frstSelector" id="frstSelector">
+            <option>Выберите пиво</option>
+            <option value="Светлое фильтрованное пиво">Алiварыя Залатое</option>
+            <option value="темное нефильтрованное пиво">Олд Бобби</option>
+            <option selected value="темное фильтрованное пиво">Алiварыя Портер</option>
+        </select>
+    </form>
+
+
+    <p>Калькулятор процентов, из расчета 12<span>%</span> годовых</p>
+    <label for="">
+        Cумма
+        <input type="text" class="sum">
+    </label>
+    <label for="years">
+        Срок в месяцах
+        <select name="years" id="years">
+            <option>Выберите срок депозита</option>
+            <option value="1">12(год)</option>
+            <option value="2">24(2 года)</option>
+            <option value="3">36(3 года)</option>
+            <option value="4">48(4 года)</option>
+            <option value="5">60(5 лет)</option>
+            <option value="10">120(10 лет)</option>
+        </select>
+    </label>
+
+    <label for="checkbox">
+        С капитализацией
+        <input class="checkbox" name="checkbox" type="checkbox">
+    </label>
+
+    <div class="mainDiv">
+        <div class="twoBlocks">
+            <p class="was">Было:</p>
+            <p class="frstSum">0</p>
+            <div class="firstGraphic-wrapper">
+                <div class="graphic-block">
+                    <div class="graphic"></div>
+                </div>
+            </div>
+        </div>
+        <div class="twoBlocks">
+            <p class="now">Станет:</p>
+            <p class="lastSum">0</p>
+            <div class="secGraphic-wrapper">
+                <div class="lastGrapjic"></div>
+            </div>
+        </div>
+    </div>
+
+    <form action="http" name="form2" method="POST">
+<label for="e-mail">
+    <p>E-mail</p>
+    <input type="text" required name="e-mail">
+</label>
+<label for="password">
+    <P>Password</P>
+    <input type="password" name="password">
+</label>
+<input type="submit">
+    </form>
+    <script>
+        // Practice_1
+        // Создайте селект с несколькими опциями, добавьте одну опцию используя Javascript, сделайте так, чтобы по выбору опции выводилось сообщение 
+// с данными этой опции
+        let option = new Option("Алiварыя Белае золата", 'Светлое нефильтрованное пиво');
+        frstSelector.appendChild(option);
+        frstSelector.addEventListener('change', () => {
+            for (let i of [...frstSelector.options]) {
+                if (i.selected) alert(i.value)
+            }
+        })
+
+        // Practice_2
+        // Создайте форму вычисления процентов по вкладу:
+        let input = document.body.querySelectorAll('.sum')[0];
+        input.addEventListener('keyup', event => {
+            if (event.keyCode < 48 || event.keyCode > 57) {
+                let newValue = "";
+                for (let i = 0; i < event.target.length; i++) {
+                    if (event.target.value[i] >= "0" && event.target.value[i] <= "9") newValue += event.target
+                        .value[i]
+                }
+                event.target.value = newValue;
+            }
+        });
+        let firstSumValue;
+        input.addEventListener('blur', () => {
+            firstSumValue = input.value;
+            document.querySelector('.frstSum').textContent = firstSumValue;
+
+            document.querySelector('.lastGrapjic').style.height = "100px";
+            document.querySelector('.graphic').style.height = "100px";
+            document.querySelector('.graphic-block').style.height = "100px";
+            document.querySelector('.graphic-block').style.position = "relative";
+            document.querySelector('.graphic').style.position = "absolute";
+            document.querySelector('.lastGrapjic').style.width = "50px";
+            document.querySelector('.graphic').style.width = "50px";
+            document.querySelector('.lastGrapjic').style.backgroundColor = "green";
+            document.querySelector('.graphic').style.backgroundColor = "red";
+            document.querySelector('.graphic').style.bottom = "0";
+
+            let select2 = document.getElementById('years');
+            select2.addEventListener('change', () => {
+
+                for (let i of [...select2.options]) {
+                    if (i.selected) {
+                        let lastSum = document.querySelector('.lastSum');
+                        lastSum.textContent = (parseInt(firstSumValue) + firstSumValue * 0.12 * i.value)
+                            .toFixed();
+                        document.querySelector('.graphic').style.height = (firstSumValue / lastSum
+                            .textContent) * 100 + "px";
+
+                        let checkbox = document.querySelector('.checkbox');
+                        checkbox.addEventListener('change', () => {
+                            if (checkbox.checked) {
+                                for (let z = 0; z <= i.value; i++) {
+                                    lastSum.textContent = (parseInt(firstSumValue) + 0.12 *
+                                        parseInt(firstSumValue)).toFixed();
+                                    firstSumValue = lastSum.textContent;
+                                }
+                            }
+                        })
+
+                    }
+                }
+            })
+            /* сумма взноса */
+        });
+
+        // Practice_3
+        // Создайте регулярное выражение для поиска трёх точек.
+  console.log("...".match(/.../g));
+
+        // Practice_4
+        // Создайте regexp, который ищет все положительные числа, в том числе десятичные.
+console.log("123,4343".match(/\d+.?\d+/g));
+
+        // Practice_5
+        // Создайте регулярку, которая ищет цвета в формате #eee, #eeeddd
+console.log(element.style.color(/[#eee-#eeeddd]/g));
+        
+        // Practice_6
+        // Предложите строку, которая подойдет под выражение ^$
+console.log("".match(/^$/))
+        
+        // Practice_7
+        // Создайте HTML-форму регистрации с email и паролем. По клику провести валидацию пароля и email, где пароль должен содержать хотя бы одну цифру, один спецсимвол и одну букву, а так же быть длиннее 6 знаков. При прохождении валидации выводить приветственное сообщение, в противном случае - ошибку.
+let form2 = document.forms[1];
+let password = form2.elements.password;
+form2.addEventListener('submit', (ev)=>{
+if (password.value.match(/ \d\D\W/) == -1 || password.value.length < 7) {alert("Пароль должен содержать одну цифру, букву и символ");
+ev.preventDefault()}
+// else alert ('Вход выполнен');
+})
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+            //   Создайте функцию, которая получает в качестве аргумента оценку по 10-балльной шкале. Для ошибочных аргументов (0, «B») функция возвращает текстовую ошибку, для верных – их текстовое описание: https://en.wikipedia.org/wiki/Academic_grading_in_Belarus
+              function Mark(x) {
+                        if (x < 1 || x > 10 || isNaN(x) == true) {
+                                return "Error";
+                        };
+                        if (x > 9) {
+                                return 'Brilliant';
+                        };
+                        if (x > 8 & x < 10) {
+                                return 'Excellent';
+                        };
+                        if (x > 7 & x < 9) {
+                                return 'Almost excellent';
+                        };
+                        if (x > 6 & x < 8) {
+                                return 'Very good';
+                        };
+                        if (x > 5 & x < 7) {
+                                return 'Good';
+                        };
+                        if (x > 4 & x < 6) {
+                                return 'Almost good';
+                        };
+                        if (x > 2 & x < 5) {
+                                return 'Satisfactory';
+                        };
+                        if (x >= 1 & x < 3) {
+                                return 'UnSatisfactory';
+                        };
+                }
+                console.log(Mark(4));
+</script>
+
+</html>

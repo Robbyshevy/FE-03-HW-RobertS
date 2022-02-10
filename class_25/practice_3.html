@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Разбейте текст этой задачи на отдельные слова, удаляя по пути точки и запятые, а полученные слова сложите в массив. Напишите функцию, которая возвращает массив из тех же слов, но развёрнутых задом наперёд, причём массив должен быть отсортирован по количеству букв в слове. Напишите другую функцию, которая считает общее количество букв с во всех элементах массива.
+    let text =
+        "Разбейте текст этой задачи на отдельные слова, удаляя по пути точки и запятые, а полученные слова сложите в массив. Напишите функцию, которая возвращает массив из тех же слов, но развёрнутых задом наперёд, причём массив должен быть отсортирован по количеству букв в слове. Напишите другую функцию, которая считает общее количество букв с во всех элементах массива."; /* string */
+    let newData = text.split(", "); /* array withou "," */
+    text = newData.join(". "); /* string with . */
+    newData = text.split(". "); /* array without "." and "," but with "массива." */
+    text = newData.join(" "); /* string with "массива." */
+    newData = text.split("."); /* array without "." in "массива." but with " " */
+    text = newData.join(" "); /* split without "." but with " " in the end */
+    newData = text.split(" "); /* array with last element " " */
+    newData.pop(); /* final array */
+    console.log(newData);
+
+    function reverseElements() {
+        let array = newData.sort((elem1, elem2) => elem2.length - elem1
+            .length); /* array sorted in the length of the string */
+        let newArray = array.map(elem =>
+            elem.split("").reverse().join("")); /* elements of array are reversed */
+        return newArray;
+    }
+    console.log(reverseElements());
+
+    function numberOfLetters() {
+        let arr = reverseElements().map(elem => elem = {
+            "Элемент": elem,
+            "Количество символов": elem.length
+        }) /* creating new array, where elemets are object with the name of the element and number of symbols */
+        return arr;
+    }
+    console.log(numberOfLetters());
+    // Example_1_call
+    let animals = [{
+            species: 'Lion',
+            name: "Kibg"
+        },
+        {
+            species: "whale",
+            name: "Mobby Dick"
+        },
+        {
+            species: "Cat",
+            name: "Chester"
+        }
+    ];
+
+    debugger;
+
+    animals.forEach(function (elem, index) {
+        let secFunction = function (i) {
+            this.print = function () {
+                console.log('#' + i + " " + this.species + ":" + this.name);
+            }
+            this.print();
+        };
+        (secFunction).call(elem, index);
+    })
+    // Example_2_apply
+
+    function addNumbersToArray() {
+        for (let i = 0; i < arguments.length; i++) {
+            if (!isNaN(arguments[i]))
+                this.numbers.push(arguments[i]);
+        }
+    }
+    let obj = {
+        string: "something",
+        numbers: []
+    };
+    let dump = [22, 34, "sad", false, 16, 25];
+    addNumbersToArray.call(obj, dump[0], dump[1], dump[2]);
+    addNumbersToArray.apply(obj, dump);
+    // Example_3_apply
+    let ranArr = [];
+    for (let i = 0; i < 10; i++) {
+        ranArr[i] = Math.ceil(Math.random() * 50);
+    }
+    console.log(Math.max.apply(Math, ranArr));
+
+    // Example_4_borrowing
+    function test() {
+        let argts = [].slice.call(arguments);
+        argts.forEach(function (e) {
+            console.log(e);
+        })
+    }
+    test("Привет", "Выведи", "нас", "всех", "в", "Консоль");
+</script>
+
+</html>

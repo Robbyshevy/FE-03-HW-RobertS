@@ -1,0 +1,6 @@
+{
+    "files.autoSave": "onFocusChange",
+    "workbench.colorTheme": "Solarized Dark",
+    "workbench.preferredLightColorTheme": "Abyss",
+    "git.ignoreLimitWarning": true
+}

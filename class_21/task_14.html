@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Решите задачу 13 через рекурсию.
+     function LastDividerRec(x, y) {
+                        if (x == y) return(x);
+                      if (x > y)
+                      { x = x % y}
+                      else {y = y % x};
+                      if (x == 0 || y == 0) return(x+y);
+                      return LastDividerRec(x,y);
+                }
+                console.log(LastDividerRec(20, 40));
+                console.log(LastDividerRec(3, 5));
+</script>
+
+</html>

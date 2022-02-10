@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Напишите функцию, которая выводит в консоль текущие дату, месяц и год в формате «24 января 2019».
+    function presentDate() {
+        let now = new Date(); /* created new data */
+        let dateNewFormat = now.toLocaleDateString().split("."); /* changed the type of the date */
+        let month = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября",
+            "ноября", "декабря"
+        ] /* created new array for splice */
+        let a = parseInt(dateNewFormat[1]) - 1; /* made a month typeof Number */
+        dateNewFormat.splice(1, 1, month[a]); /* spliced name of the month */
+        let date = dateNewFormat.join(" "); /* made a final string */
+        console.log(date);
+    }
+    presentDate();
+</script>
+
+</html>

@@ -1,0 +1,32 @@
+v
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Напишите функцию, которая заменяет все повторяющиеся символы в строке на звёздочки. Например, строка "я учусь программированию" должна преобразоваться в "я уч&ast;сь прог&ast;ам&ast;и&ast;&ast;в&ast;н&ast;ю".
+    function starInsteadLetters(string) {
+        let obj = {}; /* creating an obj */
+        let newString = string.split(""); /* creating an array */
+        for (let i = 0; i < newString.length; i++) {
+            if (obj[newString[i]]) newString.splice(i, 1,
+                    "*"
+                    ) /* in case of the presence of such object wuth such letter we change this letter on * in the array */
+            else obj[newString[i]] = 1; /* another way we create new option of the object with new letter */
+        }
+        finalString = newString.join(""); /* final string */
+        console.log(finalString);
+    }
+    starInsteadLetters("jjjhhhhjbhh");
+</script>
+
+</html>

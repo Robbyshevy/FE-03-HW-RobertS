@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .displayed {display:none};
+    </style>
+</head>
+<body>
+    <!-- practice_2 -->
+<form action="">
+<label for=""> Имя <input type="text" name="name" id="name" >
+<div>&#9989;</div></label>
+<label for=""> Email <input type="email" name="email" id="email">
+    <div>&#9989;</div></label>
+ <label for=""> Телефон<input type="tel" name="tel" id="tel">
+    <div>&#9989;</div></label>
+<label for="">Сообщение<textarea name="text" id="text" cols="30" rows="10" ></textarea>
+    <div>&#9989;</div></label> 
+  <input type="submit">
+</form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+
+// practice_2
+$('label').css('display','flex');
+$('label').css('flex-direction','raw');
+$('div').css('display','none');
+$('input').blur(function(){
+    if ($(this).val() != "") 
+$(this).next().css('display','inherit');
+});
+$('form').submit(function(ev){
+    if ($('div').css('display') == "none" || $('textarea').val().length < 10 ||$('textarea').val().length > 1000) {
+        console.log('ошика при вводе');
+        ev.preventDefault();
+    }
+    else console.log('все ок');
+})
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Напишите функцию, которая возвращает текущий день недели на русском языке.
+    function dayOfTheWeek(a, b, c) {
+        let now = new Date(c, b - 1, a); /* present date */
+        let day = now.getDay(); /* present day of today */
+        let daysWeek = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота",
+            "воскресенье"
+        ]; /* array with russian days of the week */
+        console.log(daysWeek[day - 1]);
+    }
+    dayOfTheWeek(8, 6, 2020);
+</script>
+
+</html>

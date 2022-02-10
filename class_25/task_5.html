@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Для решения задач 3-6 используйте файл [uscities.js](src/uscities.js).
+    // 5. Создайте массив только из тех городов, которые начинаются на букву D, при этом отсортируйте элементы этого массива по названию города.
+    let data3 = data.filter(elem => elem["city"][0] === "D"); /* filter array with city on D */
+    console.log(data3.sort((elem1, elem2) => (elem1["city"] > elem2["city"]) ? 1 : -1));
+</script>
+
+</html>

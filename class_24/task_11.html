@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Напишите функцию, которая принимает число, проверяет, является ли оно квадратом целого числа. Если это так, функция возвращает квадратный корень исходного числа; в ином случае генерирует ошибку. Используя задачу 2 из практики, создайте массив целых чисел. Вызовите написанную функцию для каждого элемента, отлавливая ошибки и выводя в консоль сообщения и о них, и об успешных результатах. Массив должен быть пройден до конца, несмотря на ошибки!
+    function numberSqrt(x) {
+        if (Number.isInteger(Math.sqrt(x)) == false) throw new Error("Данное число не является квадратом целого числа");
+        return Math.sqrt(x);
+    }
+
+    function random2(length, min, max) {
+        let randomArray = [];
+        for (let i = 0; i < length; i++) {
+            randomArray[i] = Math.round(Math.random() * (max - min) + min);
+        };
+        return randomArray;
+    }
+    let array = random2(20, 1, 50);
+    console.log(array);
+    for (let i = 0; i < array.length; i++) {
+        try {
+            console.log(numberSqrt(array[i]))
+        } catch (e) {
+            console.log("error: " + e.message)
+        };
+    }
+</script>
+
+</html>

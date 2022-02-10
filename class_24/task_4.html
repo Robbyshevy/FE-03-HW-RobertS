@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Напишите функцию, которая принимает строку и возвращает символ, который встречается в ней чаще всего. Если таких символов несколько, функция должна возвращать строку из этих символов.
+    function famousSymbol(str) {
+        let obj = {}
+        for (let i = 0; i < str.length; i++) {
+            if (obj[str[i]]) obj[str[i]]++
+            else obj[str[i]] = 1;
+        }
+        let letter = "";
+        let max = 0;
+        for (let i in obj) {
+            if (obj[i] > max) {
+                max = obj[i];
+                letter = i;
+            } else
+            if (max == obj[i]) {
+                letter = letter + i
+            }
+        }
+        console.log(letter);
+    }
+    let a = "fhfhfhvwews"
+    famousSymbol(a);
+</script>
+
+</html>

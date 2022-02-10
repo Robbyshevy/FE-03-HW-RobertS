@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="dvsaca-caca">a</div>
+    <script>
+//         ## DOM. Работа со страницей
+
+// Все задания выполнять в одном JS-файле. Задания разделять комментариями, в которых указывать номера задач.
+
+        // Task_1
+        // 1. Дан элемент #elem. Добавьте ему класс "www".
+        let div = document.createElement('div');
+        div.id = "elem";
+        document.body.append(div);
+        div.className = "www";
+
+        // Task_2
+        // 2. Дан элемент #elem. Проверьте наличие у него класса "www", если есть - удалите класс
+        if (div.className == "www") div.classList.toggle('www');
+
+        // Task_3
+        // 3. Напишите функцию поиска recursiveSearchTags, которая принимает на вход document и имя тега, а возвращает массив из всех элементов соответствующих этому тегу. Поиск идет в теге body
+        function recursiveSearchTags(document, tag) {
+            let array = [...document.body.getElementsByTagName(tag)];
+            return array;
+        }
+
+        // // Task_4
+        // 4. Дан ul. Дан массив. Вставьте элементы этого массива в конец ul так, чтобы каждый элемент стоял в своем li. Сделайте так, чтобы четные позиции имели красный фон.
+        let array2 = [1, 2, 3, 4, 5, 6, 7, 88, 9, 10];
+        let ul = document.createElement('ul');
+        document.body.appendChild(ul);
+        for (let i in array2) {
+            let li = document.createElement('li');
+            li.innerHTML = array2[i];
+            ul.appendChild(li);
+            if (i % 2 !== 0) li.style.backgroundColor = 'red'
+        };
+
+        // Task_5
+        // 5. Дан элемент #elem. Найдите его соседа сверху и добавьте ему в конец текст '!'
+        let previousBlock = document.createElement('div');
+        div.before(previousBlock);
+        div.previousSibling.textContent = "!";
+
+        // Task_6
+        // 6. Реализуйте функцию wrapInParagraph, которая находит текст (дочерние текстовые ноды) внутри элемента div и оборачивает текст в параграф
+        let div2 = document.createElement('div');
+        div2.innerHTML = 'nvwcnljNCLKWncln lqncl nqlknqclqnlicewnc';
+        document.body.appendChild(div2);
+
+        function wraplnParagraf(elem) {
+            if (elem.innerHTML.length > 0) {
+                let p = document.createElement('p');
+                p.textContent = elem.textContent;
+                elem.innerHTML = "";
+                elem.appendChild(p);
+            };
+        }
+        wraplnParagraf(div2);
+
+        // Task_7  
+        // 7. Реализуйте функцию normalizeClassNames, которая нормализует имена классов для всех элементов на странице. В данном случае это означает что происходит преобразование всех классов написанных используя kebab нотацию в camelCase нотацию: text-center => textCenter
+        function normalizeClassNames(document) {
+            let array3 = [...document.querySelectorAll('*')];
+            for (let i of array3) {
+                let names = i.className;
+                namesArray = names.split('-');
+                for (let i = 1; i < namesArray.length; i++) {
+                partOfName = namesArray[i].split('');
+                    partOfName.splice(partOfName[0], 1,partOfName[0].toUpperCase());
+                    namesArray[i] = partOfName.join('');
+                }
+                names = namesArray.join("")
+                i.className = names;
+            }
+        }
+        // debugger
+        normalizeClassNames(document.body);
+    </script>
+</body>
+
+</html>

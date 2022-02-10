@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Напишите функцию counterFactory(start, step), которая при вызове возвращает другую функцию – счётчик tictoc(). start – стартовое значение счётчика, step – его шаг. При каждом вызове tictoc увеличивает значение счётчика на step.
+    function counterFactory(start, step) {
+        /* Main function */
+        function ticktoc() {
+            /* second function */
+            start += step; /* start  = start + step */
+            return start /* result of the second function */
+        }
+        return ticktoc(); /* result of the main function */
+    }
+    console.log(counterFactory(2, 3));
+</script>
+
+</html>

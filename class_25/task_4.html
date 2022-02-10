@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Для решения задач 3-6 используйте файл [uscities.js](src/uscities.js).
+    // 4. Подсчитайте, сколько миллионов населения живёт во всех городах на широте от 25 до 30 градусов.
+    let data2 = data.filter(elem => elem["latitude"] >= 25 && elem["latitude"] <= 30);
+    console.log(data2.reduce((arr, elem) => arr + parseInt(elem["population"]), 0));
+</script>
+
+</html>

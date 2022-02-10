@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+        //   Создайте функцию с параметрами size (число) и unit (строка). В unit передаются единицы измерения информации («Кб», «Мб», «Гб»), в size – количество таких единиц. Функция возвращает количество байт в size.
+          function bites(size, unit) {
+                        if (isNaN(size) == true || Number(unit) == true)
+                                return 'error';
+
+                        if (unit == "Кб")
+                                return size * 1024;
+
+                        if (unit == "Мб")
+                                return size * Math.pow(1024, 2);
+
+                        if (unit == "Гб")
+                                return size * Math.pow(1024, 3);
+
+                        return 'error'
+
+                };
+                console.log(bites(2, 23));
+</script>
+
+</html>

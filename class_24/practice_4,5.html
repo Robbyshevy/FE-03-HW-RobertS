@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+//     Напишите функцию, которая считает, сколько раз определённый символ встречается в строке.
+// Перепишите функцию из задачи 4 так, чтобы она считала большие и маленькие буквы одним и тем же символом (например, 'A' == 'a').
+
+    function repeatCounterOfLetter(string, letter) {
+        let newString = [];
+        string = string.toLowerCase();
+        letter = letter.toLowerCase();
+        for (let i = 0; i < string.length; i++) {
+            if (string[i] === letter) newString.push(letter);
+        }
+        return newString.length
+    }
+    console.log(repeatCounterOfLetter("aaaaygyygaaaa", "A"));
+</script>
+
+</html>

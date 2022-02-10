@@ -1,0 +1,149 @@
+* {
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header {
+    position: sticky;
+}
+
+.headrow {
+    height: 44px;
+    background-color: #ec2227;
+
+    a {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        font-size: 18px;
+        text-align: center;
+
+        p {
+            color: white;
+            font-size: 0.88889em;
+            padding: 10px 22px;
+            font-family: "Proxima Nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            height: 19px;
+        }
+    }
+}
+
+.headrow:hover {
+    opacity: 0.7;
+}
+
+.menucontainer {
+    text-decoration: none;
+    background-color: white;
+
+    .wrapper {
+        padding: 18px 55px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+
+        .menuwrapper {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 170px auto 1fr;
+            grid-template-rows: 47px 47px;
+
+            .logo {
+                grid-area: logo;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .idea {
+                grid-area: idea;
+                display: flex;
+                justify-content: flex-end;
+                align-self: flex-end;
+                font-weight: 400;
+                color: #b3b3b3;
+            }
+
+            ;
+
+            .menu {
+                margin: 0px 20px;
+                font-family: "Proxima Nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                grid-area: menu;
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+
+                .menuitem {
+                    margin: 0 10px;
+                    height: 27px;
+                }
+
+                a {
+                    color: #242021;
+                    text-decoration: none;
+                    width: 57;
+                    height: 100%;
+                }
+
+                .drop {
+                    background-color: white;
+                    border: 0px;
+
+                    a {
+                        margin: 0;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        svg {
+                            width: 9px;
+                            height: 9px;
+                            margin-left: calc(7em / 16);
+                            margin-top: 9px;
+                        }
+                    }
+                }
+            }
+
+            .links {
+                grid-area: links;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+
+                .linkitem {
+                    display: flex;
+                    flex: row;
+
+                    svg {
+                        width: 23px;
+                        height: 23px;
+                    }
+
+                    .login {
+                        svg {
+                            width: 23px;
+                            height: 23px;
+
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            flex-wrap: nowrap;
+                        }
+                    }
+                }
+            }
+
+            grid-template-areas: "logo advert idea"
+            "logo menu links";
+        }
+
+        .burger {
+            display: none;
+        }
+    }
+
+}

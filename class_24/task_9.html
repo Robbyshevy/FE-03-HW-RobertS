@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Напишите функцию, которая принимает у пользователя дату в формате "ДД-ММ-ГГГГ" и, используя функцию из задачи 8, выдает в консоль день недели для этой даты.
+    function dayOfTheWeek2(string) {
+        let massive = string.split("-"); /* new array */
+        let day = parseInt(massive[0]); /* make a date number */
+        let month = parseInt(massive[1]); /* make a month number */
+        let year = parseInt(massive[2]); /* make a year number */
+        dayOfTheWeek(day, month, year); /* last function with new data */
+    };
+    dayOfTheWeek2("10-03-2020");
+</script>
+
+</html>

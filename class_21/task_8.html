@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+        //    Создайте функцию, которая принимает в качестве аргумента целое число, соответствующее порядковому номеру месяца. Если месяц с таким номером существует, функция возвращает имя сезона (лето, осень, зима, весна), к которому относится месяц. Если нет –сообщение об ошибке.
+           function Season(x) {
+                        if (x < 1 || x > 12 || isNaN(x) == true) {
+                                return "Error";
+                        };
+                        if (x < 4 || x > 11) {
+                                return "Winter";
+                        };
+                        if (x > 3 && x < 6) {
+                                return "Spring";
+                        };
+                        if (x > 5 && x < 9) {
+                                return "Summer";
+                        }; {
+                                return "Autumn"
+                        };
+                }
+                console.log(Season(13));
+</script>
+
+</html>

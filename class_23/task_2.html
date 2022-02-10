@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 2. Создайте объект для хранения своего любимого кулинарного рецепта. Он должен содержать название, ингредиенты и их необходимое количество (в виде вложенного объекта), а также количество порций (больше 1). Напишите функцию, которая получает "рецепт", подсчитывает, сколько каждого ингредиента нужно на одну порцию, и выводит информацию об этом в консоль.
+     let name = {
+     name: "Home pizza"};
+     let ingredients = {
+        dough: 300,
+        sauceTomato: 30,
+        pepperoni: 240,
+        cheese: 300,
+        oregano: 6};
+        let Number_of_portions = {
+            number: 6
+        };
+ let recept = [name, ingredients, Number_of_portions];
+function OnePortion(obj) {
+    if(typeof obj !== "object") {return "Error"};
+console.log(obj[0]["name"]+ ', ingredients for 1 portion:');
+for (portion in obj[1])
+console.log (portion + ":" + obj[1][portion]/obj[2]["number"] + "gr");
+    return;
+}
+OnePortion(recept);
+// addition
+let oldVariable = {
+    test: "все работает!",
+    first: function() {
+        console.log(oldVariable.test);
+    },
+    second: function(){
+        console.log(this.test);
+    }
+};
+let newVariable = oldVariable;
+oldVariable = {
+};
+newVariable.first();
+newVariable.second();
+</script>
+</html>

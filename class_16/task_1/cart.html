@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>Форма заказа</title>
+</head>
+<body>
+<header>
+<div class="head">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Бытовая техника</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Сушилки для обуви</a>
+                  <a class="dropdown-item" href="#">Стиральные машины</a>
+                  <a class="dropdown-item" href="#">Пылесосы</a>
+                  <a class="dropdown-item" href="#">Швейные,вышивальные машины</a>
+                  <a class="dropdown-item" href="#">Утюги</a>
+                  <a class="dropdown-item" href="#">Электровеники</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Техника для кухни
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Холодильники</a>
+                  <a class="dropdown-item" href="#">Кухонные плиты</a>
+                  <a class="dropdown-item" href="#">Морозильники</a>
+                  <a class="dropdown-item" href="#">Настольные плиты</a>
+                  <a class="dropdown-item" href="#">Ростеры, мини-печи</a>
+                  <a class="dropdown-item" href="#">Вытяжки</a>
+                  <a class="dropdown-item" href="#">Микроволновые печи</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Компьютерная техника
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Серверное оборудование</a>
+                  <a class="dropdown-item" href="#">Ноутбуки</a>
+                  <a class="dropdown-item" href="#">Планшеты</a>
+                  <a class="dropdown-item" href="#">Планшеты</a>
+                  <a class="dropdown-item" href="#">Компьютеры, моноблоки</a>
+                  <a class="dropdown-item" href="#">Игровые приставки</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Корзина</a>
+              </li></ul></div>
+      </nav>
+</div></header>
+<main>
+    <div class="nameform">ОФОРМЛЕНИЕ ЗАКАЗА</div>
+    <div class="form-main">
+    <form>
+        <div class="form-row">
+          <div class="col-sm-5">
+            <input type="text" class="form-control" placeholder="ИМЯ">
+          </div>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" placeholder="ФАМИЛИЯ">
+          </div>
+        </div>
+      </form> <br>
+      <form>
+      <div class="form-group row">
+            <label for="exampleFormControlInput1" class="col-sm-1 col-form-label">Телефон</label>
+            <input type="tel" class="form-control col-sm-5" id="exampleFormControlInput1" placeholder="+37529*******">
+          </div></form>
+    <form>
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-1 col-form-label">Email</label>
+      <div class="col-sm-5">
+        <input type="email" class="form-control" id="inputEmail3">
+      </div>
+    </div>
+    <fieldset class="form-group">
+      <div class="row">
+        <legend class="col-form-label col-sm-1 pt-0"></legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+            <label class="form-check-label" for="gridRadios1">
+              Самовывоз
+            </label> <br>
+            <div class="map" style="position:relative;overflow:hidden;"><a href="https://yandex.by/maps/org/21vek_by/36517583352/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">21vek.by</a><a href="https://yandex.by/maps/157/minsk/category/point_of_delivery/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Пункт выдачи в Минске</a><iframe src="https://yandex.by/map-widget/v1/-/CKu7rV-o" width="360" height="200" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+            <label class="form-check-label" for="gridRadios2">
+              Доставкой
+            </label> <br>
+            <div class="radio2">
+                <form>
+                    <div class="form-column">
+                      <div class="col-20">
+                        <input type="text" class="form-control" placeholder="Улица">
+                      </div>
+                      <br>
+                      <div class="col-20">
+                        <input type="text" class="form-control" placeholder="№ дома">
+                      </div>
+                      <br>
+                      <div class="col-20">
+                        <input type="text" class="form-control" placeholder="№ квартиры">
+                      </div>
+                    </div>
+                  </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>  <div class="form-group comment">
+        <label for="exampleFormControlTextarea1">Комментарии к заказу</label>
+        <textarea class="form-control" id="exampleFormControlTextarea2" rows="3" columns="5"></textarea>
+      </div>
+    <div class="form-group row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck1" required>
+          <label class="form-check-label" for="gridCheck1">
+            "Я прочитал и согласен с условиями доставки" 
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row button">
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary">Оформить заказ</button>
+      </div>
+    </div>
+  </form></div></main>
+<footer>
+    <span class="d-block p-2 bg-dark text-white"> <div class="time"> <p>Время работы: с 10 до 21:00</p>
+    <p>Адрес офиса: 220095, г. Минск, ул. Тимирязева, 121-55</p></div> 
+   <div class="tel"><p>Телефон:<a href="tel:+37529999999">+375299999999</a></p>
+   <p>Scype: <a href="scype:robert964">21v.by</a></p></div></span>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

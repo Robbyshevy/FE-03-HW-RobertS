@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .displayed {display:none};
+    </style>
+</head>
+<body>
+    <!-- Взяв за основу галерею из примера, сделать галерею с кнопками прокрутки вперёд и назад.
+Ссылки на изображения должны храниться не в массиве, а в <img> внутри .gallery. Например:
+
+<div class="gallery">
+	<button>← Prev</button>
+	<img src=”photo1.jpg”>
+	<img src=”photo2.jpg”>
+	<img src=”photo3.jpg”>
+	<img src=”photo4.jpg”>
+	<button>Next →</button>
+</div> -->
+
+        <div class="gallery">
+        <button>← Prev</button>
+        <img src='https://secure.i.telegraph.co.uk/multimedia/archive/03543/Narutos_selfie_344_3543114b.jpg'>
+        <img src= 'https://images.pexels.com/photos/210628/pexels-photo-210628.jpeg?cs=srgb&dl=beautiful-blur-fashion-210628.jpg&fm=jpg'>
+        <img src=  'http://sf.co.ua/13/12/wallpaper-1007620.jpg'>
+        <img src= 'https://www.goodfreephotos.com/albums/people/walking-on-the-railroad-tracks.jpg'>
+        <button>Next →</button>
+    </div>    
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+            // practice_1
+$(function() {
+   $('img').addClass('displayed');
+   $('img:eq(0)').removeClass('displayed');
+ let number = 0;
+ $('button:contains("Next")').click (function(){
+number = (number + 1) % $('img').length;
+$('img:eq('+number+')').removeClass('displayed');
+     $('img:eq('+(number - 1)+')').addClass('displayed')
+ })
+ $('button:contains("Prev")').click (function(){
+number = (number - 1) % $('img').length;
+$('img:eq('+number+')').removeClass('displayed');
+     $('img:eq('+(number + 1)+')').addClass('displayed')
+ })
+})
+</script>
+</html>

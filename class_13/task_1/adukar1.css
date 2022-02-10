@@ -1,92 +1,149 @@
-* {margin: 0;
-padding: 0;}
+* {
+    margin: 0;
+    padding: 0;
+}
 
-.wrapper {height: 790px;
-    background: linear-gradient( rgba(43,43,42,0.6), rgba(36,36,35,0.7) ), url(kct-2019.jpg);
+.wrapper {
+    height: 790px;
+    background: linear-gradient(rgba(43, 43, 42, 0.6), rgba(36, 36, 35, 0.7)), url(kct-2019.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
-display: flex;
-flex-direction: column;
-color: white;
-font-family: 'Roboto', sans-serif;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
-.contact {display: flex;
-flex-direction: row;
-justify-content: space-between;
-margin: 10px;}
-
-.bl {display: flex;
-flex-direction: row;
-justify-content: space-around;
-font-weight: bold;
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 20px 10px 20px;
 }
 
-.about {margin: 10px;
-    font-size: 11pt;}
+.bl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 170px;
+    margin-top: 20px;
+}
 
-a {text-decoration: none;
-color: white;}
+.about {
+    margin: 10px;
+    font-size: 11pt;
+    font-size: 17px;
+    font-weight: 700;
+    padding-right:15px;
+}
 
-.info {display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-font-size: 18pt;
-margin: 10px;}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {text-decoration: underline;}
 
-.seti {display: flex;
-flex-direction: row;
-justify-content: space-around;
-font-family: 'vk';}
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18pt;
+    margin: 10px 20px;
+}
 
-.tel, .seti,.inet {margin: 10px;}
+.seti {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'vk';
+}
 
-.first5 {margin: 10px;}
+.tel,
+.seti,
+.inet {
+    margin: 10px;
+}
 
-.tel {font-size: 14pt;}
+.first5 {
+    margin: 10px;
+}
 
-.kursi {display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-font-size: 62px;
-    font-family: 'Roboto',Arial,sans-serif;
+.tel {
+    font-size: 14pt;
+}
+
+.kursi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 62px;
+    font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.45;
-    font-weight: 700;}
+    font-weight: 700;
+}
 
-.aspecti {display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-items: center;}
+.aspecti {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 
 h4 {
     color: #fac832;
     font-size: 32px;
-    font-family: 'Roboto',Arial,sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.55;
-    font-weight: 600;}
+    font-weight: 600;
+}
 
-.claim {display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;}
+.claim {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-.bali {font-size: 21px;
+.bali {
+    font-size: 21px;
     font-weight: bold;
-    text-align: center;}
+    text-align: center;
+}
 
 .button {
-display: flex;
-flex-direction: column;
-justify-items: center;
-align-items: center;}
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
 
-.zapis {background-color: tomato;
+.zapis {
+    background-color: tomato;
     width: 69mm;
     height: 11mm;
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;}
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+button {background-color: tomato;
+border: none;
+color: white;
+font-size: 16px;
+top: 633px;
+left: calc(50% - 600px + 420px);
+width: 360px;
+height: 55px;
+font-weight: 600;
+border-radius: 5px;
+border: 1px solid white;
+font-family: 'Roboto', Arial, sans-serif;
+width: 360px;
+height: 65px;}
+button:hover {background-color: white;
+color: tomato;}

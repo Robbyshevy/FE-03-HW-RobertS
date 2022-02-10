@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+        //   Перепишите функцию из задачи 5 так, чтобы она принимала числа, пока их сумма остаётся меньше 100, выводила эту сумму в консоль, а возвращала количество введённых чисел.
+          function prompting(x) {
+                        let a, i, sum;
+                        sum = 0;
+                        i = 0;
+                        do {
+                                i++;
+                                a = Number(prompt(''));
+                                sum += a;
+                                console.log(sum);
+                        }
+                        while (sum < 100); {
+                                return i;
+                        }
+                }
+                console.log(prompting(2));
+</script>
+
+</html>

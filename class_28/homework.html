@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Task_1
+    <form>
+        Имя: <input type="text" id="name"><br>
+        Кол-во пончиков: <input type="text" id="donuts"><br>
+        Минут: <input type="text" id="minutes"><br>
+        Подитог: <input type="text" id="poditog"><br>
+        Налог: <input type="text" id="tax"><br>
+            Итог:<input type="text" id="itog"><br>
+            <input type="submit" value="заказать" onclick="placeOrder();">
+        </form> -->
+
+        <!-- Task_2 -->
+<!-- <form action="mailto:address@domen.domen" method="POST" enctype="text/plain" id = "send">
+    <input type="text" name="input" form="send">
+    <input type="submit" value="Send" name="send">
+    <input type="button" value="Clear" name="clear">
+</form> -->
+
+<!-- Task_4 -->
+<form action="/class_28/index.js" name="form2" method="POST">
+    <label for="e-mail">
+        <p>E-mail</p>
+        <input type="text" name="email">
+    </label>
+    <label for="password">
+        <P>Password</P>
+        <input type="password" name="password">
+    </label>
+    <input type="submit">
+        </form>
+
+
+    <script>
+        // Task_1
+//         1. Дана форма, напишите проверку: на правильность заполнения двух текстовых полей: имя (id="name") и минут (id="minutes"). Используйте проверку на оставление поля пустым ("") и правильного формата. заполнения числового поля (isNaN).
+//   ```HTML
+//   <form>Имя: <input type="text" id="name"><br>Кол-во пончиков: <input type="text" id="donuts"><br>Минут: <input type="text" id="minutes"><br>Подитог: <input type="text" id="poditog"><br>Налог: <input type="text" id="tax"><br>Итог:<input type="text" id="itog"><br><input type="submit" value="заказать" onclick="placeOrder();"></form>
+
+// function placeOrder() {
+//     let array = [...document.forms[0].elements];
+// if (document.querySelector('#name').value.length == 0) alert('ошибка');
+// for (let i = 1; i < array.length - 1; i++) {
+//    console.log(array[i])
+//     if (array[i].value.match(/\D/) == null && array[i].value.length > 0) alert('все ок');
+// else  /* alert('error'); */
+// {break;
+// return false}}}
+
+        // Task_2
+        // 2. Создать страницу с текстовым полем и двумя кнопками. При нажатии одной из них происходит передача данных содержимого текстового поля по электронной почте (action="mailto:address@domen.domen"), при нажатии другой – происходит очистка текстового поля.
+// let clear = document.getElementsByName('clear')[0];
+// clear.addEventListener('click',()=>
+// {let dataLetter = document.querySelector('#input');
+// dataLetter.value = "";})
+      
+//         // Task_3
+// 3. Напишите универсальную функцию для прохождения по полям формы с возможностью проверки введенных данных, для текстовых полей - на текст, для имейла - на имейл и тд.
+// element.addEventListener('submit', event=>{
+//     if(!element.validity.valid) event.preventDefault();
+// })
+       
+        // Task_4
+        // 4. Поверьте написанную ранее функция на обработку формы регистрации, если поле не проходит валидацию - подсветите его, если все поля валидные - выведите приветственное сообщение.
+//         let form2 = document.forms.form2;
+// let password = form2.elements.password;
+// let email = form2.elements.email;
+// form2.addEventListener('submit', (event)=>{
+//     if (email.value.match( /[-.\w]+@([\w-]+\.)+[\w-]+/g) == null) {
+//     email.style.backgroundColor = "red";
+//     event.preventDefault()}
+// if (password.value.match(/(\d\D\W)/) == null || password.value.length < 7) {
+//     password.style.backgroundColor = "red";
+//     event.preventDefault()}
+// else alert ('Вход выполнен');
+// })
+
+        // Task_5
+        // 5. Написать скрипт, которые заменяет слово «функция» в тексте на «<mark>функция</mark>», используя регулярные выражения.
+// let array = [...document.querySelectorAll("*")];
+// for(let i of array) {
+//     if (i.innerHTML.match(/(функция)/g)) i.innerHTML = innerHTML.replace(/(функция)/g, '$<mark>функция</mark>')
+// }
+
+        // Task_6
+        // 6. С помощью test определите, что переданная строка является корректным временем вида '9.59 am', '12.30 pm'.
+// function timeTest (string) {
+//     if (/(\d{1,2}[.]\d{1,2}) ([ap]m)/.test(string) == true) console.log(true)
+//     else console.log(false);
+// }
+// timeTest("12.29 pm");
+
+        // Task_7
+        // 7. Удалите одной регуляркой все повторяющиеся слова из строки, например для 'dsf xxx xxx sd' должно вернуть 'dsf xxx sd'.
+     function cleanString (string) {
+         let num = string.replace(/(\w+)(?:\s+\1)+/g, '$1');
+         console.log(num);
+     }
+        let str = 'dsf xxx xxx xxx xxx xxx xxx xxx xxx sd';
+cleanString (str);
+    </script>
+</body>
+
+</html>

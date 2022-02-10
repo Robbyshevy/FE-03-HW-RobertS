@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+//     Напишите функцию, которая создаёт и возвращает массив длиной 20 элементов, каждый из которых – случайное число от 1 до 50.
+// Перепишите функцию из задачи 1, так, чтобы она принимала три аргумента: длину нужного массива, минимальное и максимальное значения элементов.
+
+       function random2(length, min, max) {
+            let randomArray = [];
+            for (let i = 0; i < length; i++) {
+                randomArray[i] = Math.random() * (max - min) + min;
+            };
+            return randomArray;
+        }
+        console.log(random2(20, 1, 50));
+</script>
+
+</html>

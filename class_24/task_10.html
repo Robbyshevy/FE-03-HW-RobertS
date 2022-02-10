@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Примите у пользователя день его рождения в формате "ДД-ММ-ГГГГ". Напишите функцию, которая выводит в консоль количество дней, оставшихся до его дня рождения. Напишите функцию, которая возвращает дату, в которую пользователь отметит ближайший 1000-дневный юбилей (например, 11000 дней).
+    function daysToBirthday(string) {
+        let today = new Date(); /* present day */
+        let todayM = today.getTime(); /* in ms */
+        let massive = string.split("-"); /* new array */
+        let day = parseInt(massive[0]); /* make a day number */
+        let month = parseInt(massive[1] - 1); /* make a month number */
+        let year = parseInt(today.getFullYear()); /* make a year number */
+        let birthday = new Date(year, month, day); /* birthday */
+        let birthdayM = birthday.getTime(); /* birthday in ms */
+        let daysLeft;
+        if (birthdayM - todayM > 0)
+            daysLeft = (birthdayM - todayM) / 86400000 /* birthday hasn't come */
+        else if (birthdayM - todayM == 0) daysLeft = 0 /* if birthday is today */
+        else {
+            let nextYear = today.getFullYear() + 1;
+            year = parseInt(nextYear); /* make a year number */
+            let birthday = new Date(year, month, day); /* birthday */
+            birthdayM = birthday.getTime(); /* birthday in ms */
+            daysLeft = (birthdayM - todayM) / 86400000
+        };
+        console.log("До дня рождения осталось " + daysLeft.toFixed() + " дней");
+    }
+    daysToBirthday("16-06-2020");
+
+    function thousandDays(string) {
+        let today = new Date(); /* present day */
+        let todayM = today.getTime(); /* in ms */
+        let massive = string.split("-"); /* new array */
+        let day = parseInt(massive[0]); /* turn a day in a number */
+        let month = parseInt(massive[1] - 1); /* turn a month in a number */
+        let year = parseInt(massive[2]); /* turn a year in a number */
+        let birthday = new Date(year, month, day); /* birthday */
+        let birthdayM = birthday.getTime(); /* birthday in ms */
+        let daysLeft = (todayM - birthdayM) / 86400000; /* days lived */
+        let daysGone = daysLeft % 1000; /*days lived in thousands*/
+        let daysToThousand = (1000 - daysGone) * 86400000; /* days left to live to the next thousand */
+        let finalDate = new Date(todayM + daysToThousand); /* date of next thousand day */
+        let dateNewFormat = finalDate.toLocaleDateString().split(".");
+        let monthOfDate = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября",
+            "октября", "ноября", "декабря"
+        ] /* created new array for splice */
+        let a = parseInt(dateNewFormat[1]) - 1; /* made a month typeof Number */
+        dateNewFormat.splice(1, 1, monthOfDate[a]); /* spliced name of the month */
+        let date = dateNewFormat.join(" "); /* made a final string */
+        console.log(date);
+    }
+    thousandDays("10-03-1996");
+</script>
+
+</html>

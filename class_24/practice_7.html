@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Напишите функцию, которая выводит в консоль количество секунд, прошедших с начала текущего дня.
+    function timeFromDayBegining() {
+        let a = new Date(); /* set the first date */
+        a.setHours(0); /* setting 0 hours */
+        a.setMinutes(0); /* setting 0 minutes */
+        a.setSeconds(0); /* setting 0 seconds */
+        a.setMilliseconds(0); /* setting 0 millisecoonds */
+        let b = new Date(); /* set the present date */
+        let c = (b.getTime() - a.getTime()) / 1000; /* result of the function */
+
+        console.log(c.toFixed() + " секунд с начала дня");
+    }
+    timeFromDayBegining();
+</script>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Выберите пингвина из [списка вымышленных пингвинов на Википедии](https://en.wikipedia.org/wiki/List_of_fictional_penguins) и опишите его в виде объекта (не менее трёх полей; например, имя, создатель и источник). Добавьте этому объекту свойство canFly. Добавьте два метода: sayHello, который выводит в консоль приветствие и представление вашего пингвина, и fly, который в зависимости от значения свойства canFly (true или false) определяет, может ли пингвин летать, и сообщает об этом в консоль
+    let pingvin = {
+        name: "Alfred",
+        origin: "Zig et Puce",
+        creator: "Alain Saint-Organ"
+    };
+    pingvin.canFly = true;
+    pingvin.sayHello = function () {
+        console.log("Hello! My name is " + this.name + ". " + this.creator + " is my creator. My origin is " + this
+            .origin + ".")
+    };
+    pingvin.fly = function () {
+        if (this.canFly == true) console.log("I can fly")
+        else console.log("I can not fly")
+    };
+    pingvin.sayHello();
+    pingvin.fly();
+</script>
+
+</html>

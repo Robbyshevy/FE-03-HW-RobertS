@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Перепишите задачу так, чтобы вместо call применялся apply.
+    let obj2 = {
+        greeting: "Привет"
+    };
+    let names = ["Иванов", "Иван"]
+
+    function func2() {
+        for (let i = 0; i < arguments.length - 1; i++) {
+            alert(this.greeting + ', ' + arguments[i] + ' ' + arguments[i + 1]);
+        }
+    }
+    func2.apply(obj2, names);
+</script>
+
+</html>

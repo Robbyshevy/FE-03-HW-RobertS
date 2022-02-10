@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+// 4. Напишите рекурсивную функцию, которая разворачивает введённое число задом наперёд. Например, если на вход функция получает 1234, вернуть она должна 4321
+let b = 0;
+
+function Naoborot(x) {
+    while (x > 0) {
+        b = b * 10 + x % 10;
+        x = (x - (x % 10)) / 10;
+        b * 10 + Naoborot(x); {
+            return b
+        };
+    }
+}
+console.log(Naoborot(236));
+</script>
+
+</html>

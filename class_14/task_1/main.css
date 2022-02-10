@@ -17,4 +17,4 @@ img {width: 50mm;
 @keyframes ball
 {from {margin-left: 0%;
     transform: rotate(0deg);}
-to {margin-left: 90%; transform: rotate(360deg);}}
+to {margin-left: 90%; transform: rotate(1080deg);}}

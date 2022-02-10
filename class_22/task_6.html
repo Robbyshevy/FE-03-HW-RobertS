@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Напишите функцию, которая удаляет из массива повторяющиеся элементы и возвращает обновлённый массив.
+    function remove4(massive) {
+        let newMassive = [massive[0]];
+        for (let i = 1; i < massive.length; i++) {
+            let apr = true;
+            for (let j = 0; j < newMassive.length; j++) {
+                if (newMassive[j] === massive[i]) {
+                    apr = false;
+                    break
+                }
+            }
+            if (apr) newMassive.push(massive[i]);
+        }
+        return newMassive;
+
+    }
+</script>
+
+</html>

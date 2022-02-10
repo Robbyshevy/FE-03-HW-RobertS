@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Напишите функцию, которая заменяет первую букву каждого слова в строке на такую же большую.
+    function bigLetters(string) {
+        let newString = string.split(""); /* new array */
+        newString[0] = newString[0].toUpperCase(); /* Upper first letter */
+        for (let i = 0; i < newString.length; i++) {
+            if (newString[i - 1] === " ")
+                newString[i] = newString[i].toUpperCase(); /* upper first letters */
+        }
+        let finalString = newString.join(""); /* join elements */
+        console.log(finalString)
+    }
+    bigLetters("eajjjsv cjkasb vcasbb");
+</script>
+
+</html>

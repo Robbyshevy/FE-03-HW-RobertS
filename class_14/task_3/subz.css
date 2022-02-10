@@ -1,26 +1,51 @@
-
-.main { 
-    margin-left:300px;
+.main {
+    margin-left: 300px;
     width: 66px;
-height: 135px;
-overflow: hidden;}
-img:hover {
-animation-name: subzero;
-animation-duration: 0.3s;
-animation-direction: normal;
-animation-iteration-count: 1;}
+    height: 135px;
+    overflow: hidden;
+    background-image: url(subzero.jpg);
+    background-size: cover;
+    background-position: 0px 0px;
+}
 
-@keyframes subzero
-{from {margin-left:0px;}
-16.6% {margin-left:-66px;}
-33.2% {margin-left:-132px}
-49.8% {margin-left:-198px;}
-66.4% {margin-left:-264px;}
-83% {margin-left:-330px;}
-to {margin-left:-396px;}}
+.main:hover {
+    animation-name: subzero;
+    animation-duration: 0.6s;
+    animation-direction:alternate;
+    animation-iteration-count:infinite;
+    animation-timing-function: steps(6);
+}
 
 
+@keyframes subzero {
+    from {
+        background-position: 0px 0px;
+    }
 
+    /* 8.3% {
+        background-position: -66px 0px;
+    }
 
+    16.6% {
+        background-position: -132px 0px;
+    }
 
+    24.9% {
+        background-position: -198px 0px;
+    }
 
+    33.2% {
+        background-position: -264px 0px;
+    }
+
+    41.5% {
+        background-position: -330px 0px;
+    } */
+
+    50% {
+        background-position: -396px 0px;}
+
+    to {
+        background-position: 0px 0px;
+    }
+}

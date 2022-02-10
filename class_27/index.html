@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .closed {
+            background: url(closed.png) 100% 100%, no-repeat;
+            transform: scale(1.3);
+        }
+
+        .opened {
+            background: url(open.jpg), no-repeat;
+            background-size: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="text">
+    <div class="ball">
+    </div>
+    <script>
+        // // task_1
+        //Сделайте так, чтобы по нажатию на кнопку выводился alert
+        let newDiv = document.createElement('div');
+        newDiv.style.height = "20px";
+        newDiv.style.backgroundColor = "blue";
+        document.body.appendChild(newDiv);
+        newDiv.addEventListener("click", () => alert("Клик"));
+
+        //         // Task_2
+        // Создайте кнопку с произвольным текстом, сделайте так, чтобы по нажатию текст изменялся на button
+        let button = document.createElement('button')
+        button.innerHTML = 'press me'
+        button.addEventListener('click', () => button.innerHTML = 'button')
+        document.body.appendChild(button);
+
+        // Task_3
+        // Создайте форму с полем для ввода и двумя кнопками, сделайте так, чтобы по нажатию на кнопку disable, поле становилось неактивным, в случае с enable - наоборот
+        let form = document.createElement('form')
+        let input = document.createElement('input')
+        let disabled = document.createElement('input');
+        disabled.value = 'disable';
+        disabled.type = "button";
+        let enabled = document.createElement('input');
+        enabled.value = 'enable';
+        enabled.type = "button";
+        let array = [input, disabled, enabled];
+        array.forEach(el => form.appendChild(el));
+        document.body.appendChild(form);
+        disabled.addEventListener('click', () =>
+            input.disabled = true)
+        console.log(form);
+        console.log(input);
+        enabled.addEventListener('click', () => input.disabled = false)
+
+        //         // task_4
+        // Нужно создать документ с полем ввода, объектом произвольной формы и цвета. Сделайте так, чтобы в поле ввода можно было вводить только числовые значения, а объект можно было двигать и узнавать его координаты на странице
+        let textarea = document.getElementById('text');
+        textarea.addEventListener('keyup', event => {
+            console.log(textarea.value);
+            if (event.keyCode < 48 && event.keyCode !== 32 || event.keyCode > 57) {
+                let newValue = "";
+                for (let i = 0; i < event.target.length; i++) {
+                    if (event.target.value[i] >= "0" && event.target.value[i] <= "9" || event.target.value[
+                        i] === " " && i % 5 === 0) newValue += event.target.value[i]
+                }
+                event.target.value = newValue;
+            }
+        });
+
+
+        let ball = document.createElement('div')
+        ball.style.borderRadius = "75px";
+        ball.style.backgroundColor = "yellow";
+        ball.style.height = '30px'
+        ball.style.width = '30px'
+        document.body.appendChild(ball);
+        ball.style.position = 'absolute';
+        ball.style.zIndex = '1000';
+        ball.addEventListener('mousedown', event => {
+            function onMove(event) {
+                ball.style.left = event.pageX - ball.offsetWidth / 2 + 'px';
+                ball.style.top = event.pageY - ball.offsetHeight / 2 + 'px'
+            }
+            document.addEventListener('mousemove', onMove)
+            ball.addEventListener('mouseup', () => {
+                document.removeEventListener('mousemove', onMove)
+            })
+        })
+
+        //                 // Task_5 
+        // Выведите координаты мыши относительно блока в момент движения курсора мыши внутри блока. Координаты выводить под блоком.s
+        let div3 = document.createElement('div');
+        div3.style.height = '500px';
+        div3.style.backgroundColor = 'green';
+        document.body.appendChild(div3);
+        let p = document.createElement('p')
+        document.body.insertBefore(p, div)
+        div3.addEventListener('mousemove', (event) => {
+            ;
+            p.innerHTML = 'clientX: ' + event.clientX + " ,clientY: " + event.clientY
+            return p
+        })
+
+
+        //         //         // Task_6
+        // Создайте блок div, в качестве изображения фона установите ему изображение закрытой папки. Добавьте событие, которое выполняется при двойном клике на блоке и заменяет фон блока на изображение открытой папки
+        var div = document.createElement('div');
+        document.body.appendChild(div);
+        div.style.width = '128px';
+        div.style.height = '128px';
+        div.classList.add('opened');
+        div.addEventListener('dblclick', () => {
+            div.classList.toggle('opened');
+            div.classList.toggle('closed');
+        })
+
+        //         // task_7
+        // Добавьте в документ 300-400 блоков div квадратной формы с размерами сторон 30px, и цветом фона. Добавление элементов выполните с помощью цикла. Добавьте событие при наведении мыши, которое будет скруглять данные блоки с помощью border-radius до круга. Для замедления эффекта скругления в CSS можно добавить transition.
+        let mainDiv = document.createElement('div');
+        document.body.appendChild(mainDiv);
+        mainDiv.style.display = "flex";
+        mainDiv.style.flexDirection = "row";
+        mainDiv.style.alignItems = "space-between";
+        mainDiv.style.flexWrap = "wrap";
+
+        for (let i = 0; i < 350; i++) {
+            let div = document.createElement('div');
+            div.style.width = "30px";
+            div.style.height = "30px";
+            div.style.backgroundColor = "orange";
+            mainDiv.appendChild(div);
+            div.style.margin = "1%";
+        }
+
+        function mouseOver(event) {
+            let relatedTarget = event.relatedTarget;
+            console.log(relatedTarget);
+            if (relatedTarget) {
+                relatedTarget.style.borderRadius = "75px";
+                relatedTarget.style.transition = "3s";
+                event.target.style.borderRadius = "0px";
+            }
+        }
+        mainDiv.addEventListener('mouseout', mouseOver);
+    </script>
+</body>
+
+</html>

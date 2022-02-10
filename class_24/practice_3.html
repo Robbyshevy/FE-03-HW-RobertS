@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Напишите функцию, которая проверяет, начинается ли строка на https:// и заканчивается ли она на .html. Если оба условия выполнены, функция возвращает true, в ином случае – false.
+  function tOrF(str) {
+            let string = str.substr(0, 8);
+            let string2 = str.substring(str.length - 5);
+            return (string === "https://" && string2 === ".html") 
+        }
+        console.log(tOrF("https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/substring.html"))
+</script>
+
+</html>

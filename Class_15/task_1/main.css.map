@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["scss/core/_core.scss","scss/blocks/_blocks.scss","scss/layout/_layout.scss"],"names":[],"mappings":"AAKA;EALwC;EACpC,iBAI2B;EAC3B,aAFS;;;ACJb;EDAwC;EACpC,iBCD+B;;;AAC1B;EDD+B;EACpC;;ACCJ;EAAQ;;;AACC;EDH+B;EACpC,iBCEiC;;AACrC;EAAI;EACJ;;;AAEA;EDPwC;EACpC,iBCM8B;;;ACPlC;EAAG;EACC;EACA;EACA;EACA;EACA;EACA,aFFS;EEGb","file":"main.css"}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //     5. Напишите функцию для решения квадратных уравнений. В качестве параметров она должна принимать коэффиценты a, b и c, возвращать – количество корней. Сами корни уравнения (или информацию о их отсутствии) функция должна выводить в консоль.
+    // Примечание 1. Ищем только решения в действительных числах, комплексные не нужны!
+    // Примечание 2. Для получения квадратного корня используйте стандартную функцию JS: [Math.sqrt()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt).
+
+    function Koren(a, b, c) {
+        if (a == 0) {
+            return 'Недопустимое значение a';
+        }
+        let D;
+        D = Math.pow(b, 2) - 4 * a * c;
+        if (D > 0) {
+            return 2, console.log("Корнями уравнения являются", (Math.sqrt(D) - b) / (2 * a), (-b - Math.sqrt(D)) / (2 *
+                a));
+        } else if (D == 0) {
+            return 1, console.log('Корнем уровнения является', -b / (2 * a));
+        }; {
+            return 'Нет корней', console.log('Нет корней')
+        };
+    }
+    Koren(2, 4, 2);
+</script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Преобразуйте массив из задачи 2 так, чтобы его элементы расположились в обратном порядке.
+    let massive = [];
+    for(let t = 0; t < 11; t++) {
+       massive[t] = t * 5;
+    };
+    let t = massive.length;
+    m = t - 1;
+    while (massive[m] != massive[0]) {
+        massive.push(massive[m-1]);
+        m--;};
+        while (massive.length > 11)
+        {massive.shift();}
+    console.log(massive);
+</script>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+//     1. Напишите функцию, которая принимает массив случайных чисел (см. задачу 2 в практике) и создает на его основе новый. Элементы нового массива – объекты вида {initial: num1, sqrt: num2, floor: boolean1, ceil: boolean2}.
+// initial – значение элемента исходного массива с тем же индексом, sqrt – корень квадратный из этого значения. Если округление sqrt по обычным математическим правилам сходится с его округлением через floor, то floor = true, а ceil = false. Если сходится с округлением через ceil - наоборот.
+// Например, пусть у исходного массива arr[0] = 19, тогда в новом массиве newArr[0] = {initial: 19, sqrt: 4.358898943540674, floor: true, ceil: false}.
+
+    function randomRound(length, min, max) {
+        let randomArray = random2(length, min, max); /* Вывели  исходный массив */
+        let random3 = [];
+        for (let indexMain in randomArray) {
+            let secondElement = randomArray[indexMain]; /* Вывели элементы исходного массива */
+            let object = {
+                initial: secondElement,
+                sqrt: Math.sqrt(secondElement),
+                floor: Math.round(secondElement) === Math.floor(secondElement),
+                ceil: Math.round(secondElement) === Math.ceil(secondElement),
+                /* Создали новый объект для нового массива */
+            }
+            random3.push(object);
+        }
+        return random3;
+    }
+    console.log(randomRound(20, 1, 50))
+</script>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Добавьте в каждый элемент массива из задачи 1 ещё одно свойство: значение sqrt, округленное до сотых.
+    function randomRound2(length, min, max) {
+        let Array1 = randomRound(length, min, max);
+        for (let index in Array1) {
+            Array1[index].fix = parseFloat(Array1[index].sqrt.toFixed(2))
+        }
+        return Array1;
+    }
+    console.log(randomRound2(20, 1, 50));
+</script>
+
+</html>

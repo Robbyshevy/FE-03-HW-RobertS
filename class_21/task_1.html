@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Создайте функцию, которая принимает три числа: два первых должны быть длиной сторон катетов прямоугольного треугольника, а третье – длиной гипотенузы. Функция возвращает true, если такой прямоугольный треугольник возможен, и false, если нет.
+    function Storony(kat1, kat2, gipotenuza) {
+        if (kat1 <= 0 || kat2 <= 0 || gipotenuza <= 0) {
+            return 'Значения неверны';
+        } else
+        if (Math.pow(kat1, 2) + Math.pow(kat2, 2) == Math.pow(gipotenuza, 2)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    console.log(Storony(3, 4, 5));
+</script>
+
+</html>

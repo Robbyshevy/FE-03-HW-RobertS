@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // Создайте объект с информацией о себе (имя, фамилия, любимое занятие). Добавьте в него метод, который выводит эту информацию в консоль в удобочитаемом формате.
+    let myInfo = {
+        name: "Роберт",
+        surname: "Садыков",
+        hobby: "волейбол",
+    }
+    myInfo.info = function info() {
+        console.log("Меня зовут " + this.name + " " + this.surname + ". Моё любимое занятие - " + this.hobby + ".")
+    };
+    myInfo.info();
+</script>
+
+</html>
